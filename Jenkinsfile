@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy to Tomcat') {
             steps {
-                sh 'cp target/HelloWorldApp-1.0-SNAPSHOT.war /opt/tomcat/webapps/'
+                sh 'cp /var/lib/jenkins/workspace/webhook-testing/target/HelloWorldApp-1.0-SNAPSHOT.war /opt/tomcat/webapps/'
             }
         }
     }
